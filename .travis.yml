@@ -2,4 +2,14 @@ language: node_js
 
 node_js:
   - 9.5.0
-  
+
+
+deploy: 
+  provider: heroku
+  # from heroku
+  app: tap-deploy-test
+  api_key:
+    secure: $HEROKU_API_KEY
+  # when travis should be triggered
+  on:
+    branch: master
